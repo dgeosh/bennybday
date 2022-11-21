@@ -1,19 +1,37 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-<title>BennyBday</title>
-</head>
- 
-<body>
- <center>
-  <h1 style="color:green;">Happy Birthday Benny!</h1>
-  <video width="320" height="240" autoplay>
-   <source src="never gonna give you up.mp4" type="video/mp4">
-   <source src="never gonna give you up.ogg" type="video/ogg">
-   Your browser does not support the video tag.
-  </video>
- </center>
-</body>
- 
+<!DOCTYPE html> 
+<html> 
+<body onload="Continue()"> 
+
+    <div style="text-align:center" onclick="play()">
+        <h1 id="hbd" style="color:green;">Happy Birthday Benny!</h1>
+        <video id="video1" width="420" style="visibility:hidden">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+        <p id = "msg2"></p>
+    </div> 
+
+<script>
+    var myVideo = document.getElementById("video1");
+    var msg = document.getElementById("hbd");
+    var msg2 = document.getElementById("msg2");
+    
+    function Continue() {
+        msg.innerHTML = "Click to Continue";
+    }
+
+    function play() { 
+        alert("Happy Birthday to our lord and savior");
+        alert("What now?");
+        hbd.innerHTML = "Benny'd";
+        msg2.innerHTML = "Happy Birthday Benny!";
+        if (myVideo.paused) 
+            myVideo.play();
+            myVideo.style.visibility="visible";
+    }
+</script> 
+
+</body> 
 </html>
+
